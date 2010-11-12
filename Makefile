@@ -4,7 +4,8 @@ FLIXEL = .
 SRC = MusicLearner.as PlayState.as ScoreSlider.as\
       BubbleGenerator.as Bubble.as\
       Paddle.as\
-      Song.as NoteTrack.as Note.as
+      Song.as NoteTrack.as Note.as\
+      Instrument.as
 MAIN = MusicLearner.as
 SWF = MusicLearner.swf
 

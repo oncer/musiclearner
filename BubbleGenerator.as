@@ -28,6 +28,12 @@ package {
             _timeline = 0.0;
             _track = new NoteTrack("test");
             _track.addNotes("01C 04D 04D 04D 04D 08E 04D 08E 08E 04D 08E");
+
+            //var instrument:Instrument = new Instrument(Instrument.PianoC5);
+            //instrument.playNote(0);
+            //instrument.playNote(1);
+            //instrument.playNote(5);
+            //instrument.playNote(24);
         }
 
         override public function update():void
