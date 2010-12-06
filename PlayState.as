@@ -24,6 +24,7 @@ package {
         override public function update():void
         {
             super.update();
+            FlxU.collide(_bubbleGenerator.bubbles, _paddle);
         }
     }
 }

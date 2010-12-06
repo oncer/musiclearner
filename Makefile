@@ -5,7 +5,8 @@ SRC = MusicLearner.as PlayState.as ScoreSlider.as\
       BubbleGenerator.as Bubble.as\
       Paddle.as\
       Song.as NoteTrack.as Note.as\
-      Instrument.as
+      SoundPitcher.as Instrument.as\
+      data/piano_C5.mp3
 MAIN = MusicLearner.as
 SWF = MusicLearner.swf
 

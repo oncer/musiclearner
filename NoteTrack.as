@@ -5,16 +5,36 @@ package {
     {
         private var _name:String;
         private var _notes:Array;
+        private var _pos:int;
 
         public function NoteTrack(name:String)
         {
             _name = name;
             _notes = new Array();
+            _pos = 0;
         }
 
         public function addNote(_note:Note):void
         {
             _notes.push(_note);
+        }
+
+        public function getCurrentNote():Note
+        {
+            if (isFinished()) {
+                return null;
+            }
+            return _notes[_pos];
+        }
+
+        public function next():void
+        {
+            _pos++;
+        }
+
+        public function isFinished():Boolean
+        {
+            return (_pos >= _notes.length);
         }
 
         public function addNotes(notestr:String):void

@@ -25,5 +25,14 @@ package {
             }
             super.update();
         }
+
+        override public function hitLeft(contact:FlxObject, velocity:Number):void
+        {
+            if (contact is Bubble)
+            {
+                var b:Bubble = contact as Bubble;
+                b.explode();
+            }
+        }
     }
 }
