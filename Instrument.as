@@ -20,7 +20,7 @@ package {
             _pitchers = new Array();
             for (var i:int = 0; i < NUM_PITCHERS; i++)
             {
-                _pitchers.push(new SoundPitcher(soundClass));
+                _pitchers.push(new SoundPitcher(soundClass) as Sound);
             }
             _nextPitcher = 0;
         }

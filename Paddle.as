@@ -5,12 +5,15 @@ package {
     {
         [Embed(source="data/paddle-white.png")] private var ImgPaddle:Class;
 
-        public static const H_OFFSET:int = 20;
+        public static const H_OFFSET: int = 30;
+
+        private var startX: int;
 
         public function Paddle()
         {
             loadGraphic(ImgPaddle);
-            this.x = BubbleGenerator.WIDTH - this.width - H_OFFSET;
+            this.startX = BubbleGenerator.WIDTH - this.width - H_OFFSET;
+            this.x = this.startX;
             this.y = 5;
         }
 
@@ -33,6 +36,7 @@ package {
                 var b:Bubble = contact as Bubble;
                 b.explode();
             }
+            this.x = this.startX;
         }
     }
 }

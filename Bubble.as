@@ -3,10 +3,10 @@ package {
 
     public class Bubble extends FlxSprite
     {
-        [Embed(source="data/ball-white.png")] private var ImgBubble:Class;
+        [Embed(source="data/ball-white.png")] private var ImgBubble: Class;
 
-        private var _note:Note;
-        private var _generator:BubbleGenerator;
+        private var _note: Note;
+        private var _generator: BubbleGenerator;
 
         private const COLORS: Array = new Array(
             0x00ff00, 0x55ff55, 0x0000ff, 0x5555ff,
@@ -27,7 +27,7 @@ package {
             exists = false;
         }
 
-        public function go(note:Note):void
+        public function go(note:Note): void
         {
             _note = note;
             velocity.x = 120.0;
@@ -42,13 +42,13 @@ package {
             exists = true;
         }
 
-        public function explode():void
+        public function explode(): void
         {
             _generator.instrument.playNote(_note.pitch);
             exists = false;
         }
 
-        override public function update():void
+        override public function update(): void
         {
             super.update();
         }

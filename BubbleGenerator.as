@@ -3,18 +3,18 @@ package {
 
     public class BubbleGenerator extends FlxSprite
     {
-        public static const WIDTH:int = 400;
-        public static const HEIGHT:int = 190;
-        public static const MAX_BUBBLES:int = 50;
+        public static const WIDTH: int = 400;
+        public static const HEIGHT: int = 190;
+        public static const MAX_BUBBLES: int = 50;
 
-        public var instrument:Instrument;
-        public var bubbles:FlxGroup;
+        public var instrument: SimpleInstrument;
+        public var bubbles: FlxGroup;
 
-        private var _timeline:Number;
-        private var _nextNoteTime:Number;
-        private var _track:NoteTrack;
+        private var _timeline: Number;
+        private var _nextNoteTime: Number;
+        private var _track: NoteTrack;
 
-        private var _nextBubble:int;
+        private var _nextBubble: int;
 
         public function BubbleGenerator()
         {
@@ -37,7 +37,7 @@ package {
             _track.addNotes("04E 04E 04F 04G 04G 04F 04E 04D 04C 04C 04D 04E 06E 02D 08D");
             _track.addNotes("04E 04E 04F 04G 04G 04F 04E 04D 04C 04C 04D 04E 06D 02C 08C");
 
-            instrument = new Instrument(Instrument.PianoC5);
+            instrument = new SimpleInstrument(SimpleInstrument.PIANO);
             
             _timeline = 0;
             _nextNoteTime = 0;
